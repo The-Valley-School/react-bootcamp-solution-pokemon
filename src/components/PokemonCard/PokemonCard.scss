@@ -1,0 +1,41 @@
+.pokemon-card {
+  text-align: center;
+
+  &__image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    object-position: bottom center;
+    margin: 0 60px;
+  }
+
+  &__number {
+    font-size: 10px;
+    line-height: 1;
+    margin: 0;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: capitalize;
+    margin: 0;
+  }
+
+  &__data {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  &__attr {
+    font-size: 8px;
+    font-weight: 600;
+    margin: 0px 5px;
+  }
+
+  &__more-info {}
+}

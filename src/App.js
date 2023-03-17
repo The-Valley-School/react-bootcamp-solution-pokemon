@@ -14,7 +14,7 @@ export const LanguageSelector = createContext();
 
 function App() {
   const [locale, setLocale] = useState(navigator.language);
-  const [messages, setMessages] = useState();
+  const [messages, setMessages] = useState(English);
 
   useEffect(() => {
     switch (locale) {

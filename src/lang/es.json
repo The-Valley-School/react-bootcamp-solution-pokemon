@@ -1,4 +1,7 @@
 {
   "pokemons:weight": "PESO",
-  "pokemons:height": "ALTURA"
+  "pokemons:height": "ALTURA",
+  "home:pokedex": "POKEDEX",
+  "home:game": "JUEGO",
+  "footer:text": "Hazte con todos!"
 }

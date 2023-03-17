@@ -1,9 +1,12 @@
+import { FormattedMessage } from "react-intl";
 import "./Footer.scss";
 
-const Footer = () => {
+const Footer = ({ smaller }) => {
   return (
-    <footer className="footer">
-      <p>Soy el footer</p>
+    <footer className={`footer ${smaller ? "footer--smaller" : ""} `}>
+      <p className="footer__text">
+        <FormattedMessage id="footer:text" />
+      </p>
     </footer>
   );
 };

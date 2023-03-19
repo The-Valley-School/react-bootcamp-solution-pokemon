@@ -3,5 +3,6 @@
   "pokemons:height": "ALTURA",
   "home:pokedex": "POKEDEX",
   "home:game": "JUEGO",
-  "footer:text": "Hazte con todos!"
+  "footer:text": "Hazte con todos!",
+  "pokemon-detail:stats": "Datos"
 }

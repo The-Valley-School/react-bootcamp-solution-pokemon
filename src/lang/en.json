@@ -3,5 +3,6 @@
   "pokemons:height": "HEIGHT",
   "home:pokedex": "POKEDEX",
   "home:game": "QUIZ GAME",
-  "footer:text": "GOTTA CATCH 'EM ALL!"
+  "footer:text": "GOTTA CATCH 'EM ALL!",
+  "pokemon-detail:stats": "Stats"
 }

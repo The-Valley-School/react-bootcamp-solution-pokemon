@@ -13,6 +13,10 @@ html,
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 button {
   border: none;
   box-shadow: none;

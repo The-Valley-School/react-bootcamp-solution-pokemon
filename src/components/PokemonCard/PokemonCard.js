@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl";
 import { getBackgroundForPokemon } from "../../utils/utils";
 
 const PokemonCard = ({ pokemon, showOnlyImage }) => {
-  const [pokemonData] = useFetch(pokemon.url);
+  const [pokemonData] = useFetch(pokemon?.url);
 
   if (showOnlyImage) {
     return (

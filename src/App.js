@@ -13,6 +13,7 @@ import Spanish from "./lang/es.json";
 export const LanguageSelector = createContext();
 
 function App() {
+  // These are the states of the APP
   const [locale, setLocale] = useState(navigator.language);
   const [messages, setMessages] = useState(English);
 

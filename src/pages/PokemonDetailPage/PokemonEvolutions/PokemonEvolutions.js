@@ -10,7 +10,7 @@ const PokemonEvolutions = ({ species, className }) => {
 
   return (
     <div className={"pokemon-evolutins " + className}>
-      <h3 className="pokemon-evolutins__title">
+      <h3 className="pokemon-evolutions__title generic-title">
         <FormattedMessage id="pokemon-detail:evolutions" />
       </h3>
       <div className="pokemon-evolutions__list">

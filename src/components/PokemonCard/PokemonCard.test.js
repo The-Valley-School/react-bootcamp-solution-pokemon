@@ -17,8 +17,8 @@ describe("PokemonCard component", () => {
     const { container } = customTestingRender(<PokemonCard pokemon={mockPokemon}></PokemonCard>);
     await screen.findByText("bulbasaur");
     await screen.findByText("#1", { exact: false });
-    await screen.findByText("69KG", { exact: false });
-    await screen.findByText("7M", { exact: false });
+    await screen.findByText("6.9KG", { exact: false });
+    await screen.findByText("0.7M", { exact: false });
     const imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png";
     const image = container.querySelector(".pokemon-card__image");
     expect(image).toHaveAttribute("src", imageUrl);

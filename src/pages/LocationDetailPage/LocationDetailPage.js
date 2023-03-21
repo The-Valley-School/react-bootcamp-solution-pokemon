@@ -24,7 +24,7 @@ const LocationDetailPage = () => {
 
         <div className="location-detail-page__pokemon-list">
           {firstPokemons.map((pokemon) => (
-            <PokemonCard showOnlyImage={true} key={pokemon.pokemon.name} pokemon={pokemon.pokemon} />
+            <PokemonCard className={"show-slow"} showOnlyImage={true} key={pokemon.pokemon.name} pokemon={pokemon.pokemon} />
           ))}
         </div>
 

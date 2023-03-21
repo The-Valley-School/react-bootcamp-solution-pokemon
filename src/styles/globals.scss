@@ -28,3 +28,25 @@ button {
 a {
   text-decoration: none;
 }
+
+/* Remove borders while loading image */
+img[src=""],
+img[src="undefined"],
+img:not([src]) {
+  opacity: 0;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.show-slow {
+  opacity: 1;
+  animation: show ease-in-out 500ms;
+}

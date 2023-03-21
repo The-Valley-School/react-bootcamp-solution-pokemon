@@ -1,3 +1,10 @@
+export const roundedToFixed = (float = 0, divider = 1, digits = 1) => {
+  const numberToFix = float / divider;
+  const rounder = Math.pow(10, digits);
+  const rounded = (Math.round(numberToFix * rounder) / rounder).toFixed(digits);
+  return rounded;
+};
+
 export const getPokemonlistFromEvolutions = (evolutions) => {
   if (!evolutions?.chain) {
     return [];

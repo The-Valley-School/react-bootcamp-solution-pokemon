@@ -1,10 +1,11 @@
 import { FormattedMessage } from "react-intl";
 import "./PokemonMainInfo.scss";
+import { roundedToFixed } from "../../../utils/utils";
 
 const PokemonMainInfo = ({ pokemonData, hideData, className }) => {
   return (
     <div className={"pokemon-main-info " + className}>
-      <img className={`pokemon-main-info__image ${hideData ? "pokemon-main-info__image--hide" : ""}`} src={pokemonData?.sprites?.other?.["official-artwork"]?.front_default} />
+      <img className={`show-slow pokemon-main-info__image ${hideData ? "pokemon-main-info__image--hide" : ""}`} src={pokemonData?.sprites?.other?.["official-artwork"]?.front_default} />
       <p className="pokemon-main-info__number">#{pokemonData?.id || ""}</p>
       <p className="pokemon-main-info__name">{hideData ? "???" : pokemonData?.name || "- -"}</p>
       <div className="pokemon-main-info__types">
@@ -18,11 +19,11 @@ const PokemonMainInfo = ({ pokemonData, hideData, className }) => {
         <span className="pokemon-main-info__attr">
           <FormattedMessage id="pokemons:weight" />:
         </span>{" "}
-        {pokemonData?.weight}KG
+        {roundedToFixed(pokemonData?.weight, 10, 1)}KG
         <span className="pokemon-main-info__attr">
           <FormattedMessage id="pokemons:height" />:
         </span>{" "}
-        {pokemonData?.height}M
+        {roundedToFixed(pokemonData?.height, 10, 1)}M
       </div>
     </div>
   );

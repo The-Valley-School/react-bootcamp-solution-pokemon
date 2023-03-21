@@ -18,7 +18,7 @@ const PokemonsPage = () => {
       <div className="page__content pokemons-page__content">
         <div className="pokemons-page__pokemon-list">
           {firstPokemons.map((pokemon) => (
-            <PokemonCard key={pokemon.name} pokemon={pokemon}></PokemonCard>
+            <PokemonCard className={"show-slow"} key={pokemon.name} pokemon={pokemon}></PokemonCard>
           ))}
         </div>
 

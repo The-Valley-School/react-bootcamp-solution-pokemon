@@ -13,7 +13,7 @@ const PokemonMoves = ({ pokemonMoves, className }) => {
 
       <div className="pokemon-moves__list">
         {movesToShow?.map((item) => (
-          <div key={item.move.name} className="pokemon-moves__move">
+          <div key={item.move.name} className="pokemon-moves__move show-slow">
             {item.move.name}
           </div>
         ))}

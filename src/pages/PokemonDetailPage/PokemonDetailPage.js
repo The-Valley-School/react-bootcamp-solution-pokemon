@@ -26,7 +26,7 @@ const PokemonDetailPage = () => {
         <PokeballSeparator></PokeballSeparator>
         <PokemonStats stats={pokemonData?.stats}></PokemonStats>
         <PokeballSeparator></PokeballSeparator>
-        <PokemonEvolutions pokemonData={pokemonData}></PokemonEvolutions>
+        <PokemonEvolutions species={pokemonData?.species}></PokemonEvolutions>
         <PokeballSeparator></PokeballSeparator>
         <PokemonLocations pokemonData={pokemonData}></PokemonLocations>
         <PokeballSeparator></PokeballSeparator>

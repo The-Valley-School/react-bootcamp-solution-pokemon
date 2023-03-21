@@ -1,5 +1,6 @@
 {
   "general:show-more": "+ MORE",
+  "general:more-info": "+ INFO",
   "pokemons:weight": "WEIGHT",
   "pokemons:height": "HEIGHT",
   "home:pokedex": "POKEDEX",
@@ -8,6 +9,7 @@
   "pokemon-detail:stats": "Stats",
   "pokemon-detail:moves": "Moves",
   "pokemon-detail:games": "Games",
+  "pokemon-detail:evolutions": "Evolutions",
   "pokemon-detail:hp": "HP",
   "pokemon-detail:attack": "Attack",
   "pokemon-detail:defense": "Defense",

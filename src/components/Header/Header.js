@@ -5,12 +5,18 @@ import { FaArrowLeft } from "react-icons/fa";
 import { LanguageSelector } from "../../App";
 import { useContext } from "react";
 
-const Header = () => {
+const Header = ({ background, biggerPaddingBottom }) => {
   const navigate = useNavigate();
   const { setLanguage } = useContext(LanguageSelector);
 
   return (
-    <header className="header">
+    <header
+      className={`
+      header
+      ${background ? `background-${background}` : ""}
+      ${biggerPaddingBottom ? "header--bigger-padding" : ""}
+    `}
+    >
       <button className="header__go-back" onClick={() => navigate(-1)}>
         <FaArrowLeft />
       </button>

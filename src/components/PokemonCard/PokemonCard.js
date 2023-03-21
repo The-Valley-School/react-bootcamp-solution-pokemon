@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import "./PokemonCard.scss";
 import { FormattedMessage } from "react-intl";
+import { getBackgroundForPokemon } from "../../utils/utils";
 
 const PokemonCard = ({ pokemon, showOnlyImage }) => {
   const [pokemonData] = useFetch(pokemon.url);
@@ -31,8 +32,9 @@ const PokemonCard = ({ pokemon, showOnlyImage }) => {
       </div>
 
       <NavLink to={`/pokemon/${pokemonData?.id}`}>
-        <button className="btn pokemon-card__more-info">+ INFO</button>
+        <button className="btn btn--small pokemon-card__more-info">+ INFO</button>
       </NavLink>
+      <div className="pokemon-card__card" style={getBackgroundForPokemon(pokemonData)}></div>
     </div>
   );
 };

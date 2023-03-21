@@ -8,6 +8,10 @@
   justify-content: space-around;
   padding: 20px;
 
+  &--bigger-padding {
+    padding-bottom: 155px;
+  }
+
   &__go-back {
     color: #FFF;
     font-size: 25px;

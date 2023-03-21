@@ -10,6 +10,7 @@ import PokemonGames from "./PokemonGames/PokemonGames";
 import PokeballSeparator from "../../components/PokeballSeparator/PokeballSeparator";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import { useEffect, useState } from "react";
 
 const PokemonDetailPage = () => {
   const { pokemonId } = useParams();
@@ -17,9 +18,22 @@ const PokemonDetailPage = () => {
   const POKEMON_URL = process.env.REACT_APP_API_URL + "/pokemon/" + pokemonId;
   const [pokemonData] = useFetch(POKEMON_URL);
 
+  const [headerBackground, setHeaderBackground] = useState();
+  const [footerBackground, setFooterBackground] = useState();
+
+  useEffect(() => {
+    if (pokemonData) {
+      const firstPokemonType = pokemonData?.types?.[0]?.type?.name;
+      const secondPokemonType = pokemonData?.types?.[1]?.type?.name;
+
+      setHeaderBackground(firstPokemonType || "default");
+      setFooterBackground(secondPokemonType || firstPokemonType || "default");
+    }
+  }, [pokemonData]);
+
   return (
     <div className="pokemon-detail-page page">
-      <Header></Header>
+      <Header biggerPaddingBottom={true} background={headerBackground}></Header>
 
       <div className="pokemon-detail-page__content page__content">
         <PokemonMainInfo pokemonData={pokemonData}></PokemonMainInfo>
@@ -35,7 +49,7 @@ const PokemonDetailPage = () => {
         <PokemonGames games={pokemonData?.game_indices}></PokemonGames>
       </div>
 
-      <Footer></Footer>
+      <Footer background={footerBackground}></Footer>
     </div>
   );
 };

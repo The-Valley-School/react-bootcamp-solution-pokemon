@@ -1,13 +1,9 @@
-import { useState } from "react";
 import { FormattedMessage } from "react-intl";
+import { usePagination } from "../../../hooks/usePaginator";
 import "./PokemonMoves.scss";
 
-const NUM_ITEMS_PER_PAGE = 6;
-
 const PokemonMoves = ({ pokemonMoves }) => {
-  const [numMovesToShow, setNumMovesToShow] = useState(NUM_ITEMS_PER_PAGE);
-  const showMore = () => setNumMovesToShow(numMovesToShow + NUM_ITEMS_PER_PAGE);
-  const movesToShow = pokemonMoves ? pokemonMoves.slice(0, numMovesToShow) : [];
+  const [movesToShow, showMore, theAreMore] = usePagination(pokemonMoves, 6);
 
   return (
     <div className="pokemon-moves">
@@ -23,7 +19,7 @@ const PokemonMoves = ({ pokemonMoves }) => {
         ))}
       </div>
 
-      {pokemonMoves && pokemonMoves.length > numMovesToShow && (
+      {theAreMore && (
         <button className="btn pokemon-moves__show-more" onClick={showMore}>
           <FormattedMessage id="general:show-more" />
         </button>

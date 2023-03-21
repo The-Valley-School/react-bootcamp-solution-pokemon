@@ -1,5 +1,9 @@
+@import "../../styles/variables.scss";
+
 .pokemon-card {
   text-align: center;
+  margin: 0px 5px 15px 5px;
+  position: relative;
 
   &__image {
     width: 150px;
@@ -46,5 +50,35 @@
     margin: 0px 5px;
   }
 
-  &__more-info {}
+  &__more-info {
+    margin-bottom: 10px;
+  }
+
+  &__card {
+    position: absolute;
+    z-index: -10;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #78c84f;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 15px 0px #CDCDCD;
+
+    &::after {
+      background-color: $background-superlight;
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 25%;
+      bottom: 0;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+    }
+  }
 }

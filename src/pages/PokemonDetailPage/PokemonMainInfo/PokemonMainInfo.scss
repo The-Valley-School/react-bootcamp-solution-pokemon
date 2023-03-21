@@ -6,7 +6,11 @@
     height: 220px;
     object-fit: contain;
     object-position: center;
-    margin: 0 60px;
+    margin: 0 60px 10px 60px;
+
+    &--hide {
+      filter: brightness(0%) contrast(80%);
+    }
   }
 
   &__number {

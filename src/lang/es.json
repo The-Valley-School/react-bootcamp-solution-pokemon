@@ -16,5 +16,7 @@
   "pokemon-detail:defense": "Defensa",
   "pokemon-detail:special-attack": "Ata. Esp",
   "pokemon-detail:special-defense": "Def. Esp",
-  "pokemon-detail:speed": "Veloc."
+  "pokemon-detail:speed": "Veloc.",
+  "game:play-again": "RESETEAR",
+  "game:solve": "RESOLVER"
 }

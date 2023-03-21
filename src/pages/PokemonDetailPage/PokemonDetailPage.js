@@ -10,26 +10,14 @@ import PokemonGames from "./PokemonGames/PokemonGames";
 import PokeballSeparator from "../../components/PokeballSeparator/PokeballSeparator";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import { useEffect, useState } from "react";
+import usePokemonColors from "../../hooks/usePokemonColors";
 
 const PokemonDetailPage = () => {
   const { pokemonId } = useParams();
 
   const POKEMON_URL = process.env.REACT_APP_API_URL + "/pokemon/" + pokemonId;
   const [pokemonData] = useFetch(POKEMON_URL);
-
-  const [headerBackground, setHeaderBackground] = useState();
-  const [footerBackground, setFooterBackground] = useState();
-
-  useEffect(() => {
-    if (pokemonData) {
-      const firstPokemonType = pokemonData?.types?.[0]?.type?.name;
-      const secondPokemonType = pokemonData?.types?.[1]?.type?.name;
-
-      setHeaderBackground(firstPokemonType || "default");
-      setFooterBackground(secondPokemonType || firstPokemonType || "default");
-    }
-  }, [pokemonData]);
+  const [headerBackground, footerBackground] = usePokemonColors(pokemonData);
 
   return (
     <div className="pokemon-detail-page page">

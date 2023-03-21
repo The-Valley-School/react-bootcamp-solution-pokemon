@@ -4,9 +4,9 @@ import "./PokemonGames.scss";
 const PokemonGames = ({ games }) => {
   return (
     <div className="pokemon-games">
-      <div className="pokemon-games__title generic-title">
+      <h3 className="pokemon-games__title generic-title">
         <FormattedMessage id="pokemon-detail:games" />
-      </div>
+      </h3>
 
       <div className="pokemon-games__list">
         {games?.map((game) => (

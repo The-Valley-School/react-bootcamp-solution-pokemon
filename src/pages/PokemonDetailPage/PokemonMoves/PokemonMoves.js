@@ -11,9 +11,9 @@ const PokemonMoves = ({ pokemonMoves }) => {
 
   return (
     <div className="pokemon-moves">
-      <p className="pokemon-moves__title generic-title">
+      <h3 className="pokemon-moves__title generic-title">
         <FormattedMessage id="pokemon-detail:moves" />
-      </p>
+      </h3>
 
       <div className="pokemon-moves__list">
         {movesToShow?.map((item) => (

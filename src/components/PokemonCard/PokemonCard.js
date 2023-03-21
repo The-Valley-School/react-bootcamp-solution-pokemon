@@ -3,8 +3,16 @@ import useFetch from "../../hooks/useFetch";
 import "./PokemonCard.scss";
 import { FormattedMessage } from "react-intl";
 
-const PokemonCard = ({ pokemon }) => {
+const PokemonCard = ({ pokemon, showOnlyImage }) => {
   const [pokemonData] = useFetch(pokemon.url);
+
+  if (showOnlyImage) {
+    return (
+      <NavLink to={`/pokemon/${pokemonData?.id}`}>
+        <img className="pokemon-card__image-only" src={pokemonData?.sprites?.other?.["official-artwork"]?.front_default} />
+      </NavLink>
+    );
+  }
 
   return (
     <div className="pokemon-card">

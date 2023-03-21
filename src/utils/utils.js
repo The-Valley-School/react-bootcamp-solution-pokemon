@@ -15,3 +15,13 @@ const getSpecies = (chain) => {
 
   return [chain.species];
 };
+
+export const transformAreaName = (areaName) => {
+  let newName = areaName.replace("-area", "");
+  newName = removeDashes(newName);
+  return newName;
+};
+
+export const removeDashes = (text) => {
+  return text ? text.replace(/-/g, " ") : "";
+};

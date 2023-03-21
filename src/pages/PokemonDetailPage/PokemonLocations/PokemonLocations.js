@@ -4,11 +4,11 @@ import useFetch from "../../../hooks/useFetch";
 import { transformAreaName } from "../../../utils/utils";
 import "./PokemonLocations.scss";
 
-const PokemonLocations = ({ pokemonData }) => {
+const PokemonLocations = ({ pokemonData, className }) => {
   const [locations] = useFetch(pokemonData?.location_area_encounters);
 
   return (
-    <div className="pokemon-locations">
+    <div className={"pokemon-locations " + className}>
       <h3 className="pokemon-locations__title generic-title">
         <FormattedMessage id="pokemon-detail:locations" />
       </h3>

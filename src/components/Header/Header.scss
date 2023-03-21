@@ -7,8 +7,10 @@
   align-items: center;
   justify-content: space-around;
   padding: 20px;
+  position: relative;
 
-  &--bigger-padding {
+  &--bigger-padding,
+  &--with-location {
     padding-bottom: 155px;
   }
 
@@ -42,5 +44,12 @@
     font-weight: 200;
     margin: 0;
     padding: 8px 0px 8px 8px;
+  }
+
+  &__location-icon {
+    position: absolute;
+    bottom: -50px;
+    width: 120px;
+    height: auto;
   }
 }

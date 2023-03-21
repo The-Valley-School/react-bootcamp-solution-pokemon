@@ -16,7 +16,7 @@ const LocationDetailPage = () => {
 
   return (
     <div className="location-detail-page page">
-      <Header></Header>
+      <Header showLocationIcon={true}></Header>
       <div className="location-detail-page__content page__content">
         <h1 className="location-detail-page__title">{locationData?.names?.[0]?.name}</h1>
 

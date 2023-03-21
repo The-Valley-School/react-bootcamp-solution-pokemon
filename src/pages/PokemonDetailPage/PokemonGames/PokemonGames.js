@@ -1,9 +1,9 @@
 import { FormattedMessage } from "react-intl";
 import "./PokemonGames.scss";
 
-const PokemonGames = ({ games }) => {
+const PokemonGames = ({ games, className }) => {
   return (
-    <div className="pokemon-games">
+    <div className={"pokemon-games " + className}>
       <h3 className="pokemon-games__title generic-title">
         <FormattedMessage id="pokemon-detail:games" />
       </h3>

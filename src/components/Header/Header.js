@@ -4,8 +4,9 @@ import pokemonLogo from "../../assets/pokemon-logo.png";
 import { FaArrowLeft } from "react-icons/fa";
 import { LanguageSelector } from "../../App";
 import { useContext } from "react";
+import locationIcon from "../../assets/location-icon.png";
 
-const Header = ({ background, biggerPaddingBottom }) => {
+const Header = ({ background, biggerPaddingBottom, showLocationIcon }) => {
   const navigate = useNavigate();
   const { setLanguage } = useContext(LanguageSelector);
 
@@ -15,6 +16,7 @@ const Header = ({ background, biggerPaddingBottom }) => {
       header
       ${background ? `background-${background}` : ""}
       ${biggerPaddingBottom ? "header--bigger-padding" : ""}
+      ${showLocationIcon ? "header--with-location" : ""}
     `}
     >
       <button className="header__go-back" onClick={() => navigate(-1)}>
@@ -33,6 +35,8 @@ const Header = ({ background, biggerPaddingBottom }) => {
           EN
         </button>
       </div>
+
+      {showLocationIcon && <img src={locationIcon} className="header__location-icon" />}
     </header>
   );
 };

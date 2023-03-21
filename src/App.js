@@ -9,6 +9,7 @@ import { IntlProvider } from "react-intl";
 import { createContext, useEffect, useState } from "react";
 import English from "./lang/en.json";
 import Spanish from "./lang/es.json";
+import ScrollTop from "./components/ScrollTop/ScrollTop";
 
 export const LanguageSelector = createContext();
 
@@ -39,6 +40,7 @@ function App() {
               <Route path="/location/:locationName" element={<LocationDetailPage></LocationDetailPage>}></Route>
               <Route path="/game" element={<GamePage></GamePage>}></Route>
             </Routes>
+            <ScrollTop></ScrollTop>
           </HashRouter>
         </IntlProvider>
       </LanguageSelector.Provider>

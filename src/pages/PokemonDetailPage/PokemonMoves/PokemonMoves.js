@@ -2,11 +2,11 @@ import { FormattedMessage } from "react-intl";
 import { usePagination } from "../../../hooks/usePaginator";
 import "./PokemonMoves.scss";
 
-const PokemonMoves = ({ pokemonMoves }) => {
+const PokemonMoves = ({ pokemonMoves, className }) => {
   const [movesToShow, showMore, theAreMore] = usePagination(pokemonMoves, 6);
 
   return (
-    <div className="pokemon-moves">
+    <div className={"pokemon-moves " + className}>
       <h3 className="pokemon-moves__title generic-title">
         <FormattedMessage id="pokemon-detail:moves" />
       </h3>

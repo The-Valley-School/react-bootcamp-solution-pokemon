@@ -24,17 +24,17 @@ const PokemonDetailPage = () => {
       <Header biggerPaddingBottom={true} background={headerBackground}></Header>
 
       <div className="pokemon-detail-page__content page__content">
-        <PokemonMainInfo pokemonData={pokemonData}></PokemonMainInfo>
-        <PokeballSeparator></PokeballSeparator>
-        <PokemonStats stats={pokemonData?.stats}></PokemonStats>
-        <PokeballSeparator></PokeballSeparator>
-        <PokemonEvolutions species={pokemonData?.species}></PokemonEvolutions>
-        <PokeballSeparator></PokeballSeparator>
-        <PokemonLocations pokemonData={pokemonData}></PokemonLocations>
-        <PokeballSeparator></PokeballSeparator>
-        <PokemonMoves pokemonMoves={pokemonData?.moves}></PokemonMoves>
-        <PokeballSeparator></PokeballSeparator>
-        <PokemonGames games={pokemonData?.game_indices}></PokemonGames>
+        <PokemonMainInfo className="pokemon-detail-page__main-info" pokemonData={pokemonData}></PokemonMainInfo>
+        <PokeballSeparator className="pokemon-detail-page__separator"></PokeballSeparator>
+        <PokemonStats className="pokemon-detail-page__stats" stats={pokemonData?.stats}></PokemonStats>
+        <PokeballSeparator className="pokemon-detail-page__separator mobile-only"></PokeballSeparator>
+        <PokemonEvolutions className="pokemon-detail-page__evolutions" species={pokemonData?.species}></PokemonEvolutions>
+        <PokeballSeparator className="pokemon-detail-page__separator"></PokeballSeparator>
+        <PokemonLocations className="pokemon-detail-page__locations" pokemonData={pokemonData}></PokemonLocations>
+        <PokeballSeparator className="pokemon-detail-page__separator mobile-only"></PokeballSeparator>
+        <PokemonMoves className="pokemon-detail-page__moves" pokemonMoves={pokemonData?.moves}></PokemonMoves>
+        <PokeballSeparator className="pokemon-detail-page__separator pokemon-detail-page__separator--last"></PokeballSeparator>
+        <PokemonGames className="pokemon-detail-page__games" games={pokemonData?.game_indices}></PokemonGames>
       </div>
 
       <Footer background={footerBackground}></Footer>

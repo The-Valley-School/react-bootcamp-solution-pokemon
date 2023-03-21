@@ -1,9 +1,9 @@
 import { FormattedMessage } from "react-intl";
 import "./PokemonMainInfo.scss";
 
-const PokemonMainInfo = ({ pokemonData, hideData }) => {
+const PokemonMainInfo = ({ pokemonData, hideData, className }) => {
   return (
-    <div className="pokemon-main-info">
+    <div className={"pokemon-main-info " + className}>
       <img className={`pokemon-main-info__image ${hideData ? "pokemon-main-info__image--hide" : ""}`} src={pokemonData?.sprites?.other?.["official-artwork"]?.front_default} />
       <p className="pokemon-main-info__number">#{pokemonData?.id || ""}</p>
       <p className="pokemon-main-info__name">{hideData ? "???" : pokemonData?.name || "- -"}</p>

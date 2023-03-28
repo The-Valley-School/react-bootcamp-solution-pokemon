@@ -6,7 +6,7 @@ Será un proyecto sobre Pokemon que contenga una Pokedex y un juego en el que te
 
 Este sería el FIGMA de nuestro proyecto:
 
-<https://www.figma.com/file/hJjuVDsGfpxk3wziYPAigE/WD-BC1-SW%2BR%26M?node-id=0%3A1&t=mg2oDlnx6BXWCt1E-1>
+<https://www.figma.com/community/file/1194584289228773152>
 
 Y este sería el enlace de la documentación de la API:
 
